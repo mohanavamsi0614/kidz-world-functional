@@ -124,18 +124,17 @@ function updatePrice() {
 cartButton.onclick = () => {
   updatePrice();
 
-
+let m="
   for (let index = 0; index < items.length; index++) {
     if (items[index].quantity != 0) {
-      console.log(
+      m+=
         "Item name: " +
           items[index].name +
           " - Quantity: " +
           items[index].quantity
-      );
     }
   }
-  let m= "The total amount is " + finalDollars + "$ and " + finalCents + " cents"
+   m += "The total amount is " + finalDollars + "$ and " + finalCents + " cents"
   window.open("https://wa.me/+916281605767?text="+encodeURIComponent(m))
   console.log(
     "The total amount is " + finalDollars + "$ and " + finalCents + " cents"
